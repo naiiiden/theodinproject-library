@@ -40,6 +40,6 @@ myLibrary.forEach(book => {
         <h2>Title: <span>${book.bookTitle}</span></h2>
         <p>Author: <span>${book.bookAuthor}</span></p>
         <p>Pages: <span>${book.bookPages}</span></p>
-        <p>Read: ${book.read ? "yes" : "no"}</p>
+        <p>Read: <span>${book.read ? "Yes" : "No"}</span></p>
     </div>`;
 });
