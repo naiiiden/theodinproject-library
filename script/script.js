@@ -37,7 +37,7 @@ function addBookToLibrary() {
 myLibrary.forEach(book => {
     document.querySelector("#main").innerHTML += 
     `<div class="book-container">
-        <button class="delete" aria-label="Remove book from library">X</button>
+        <button class="delete" aria-label="Remove book from library" title="Remove book from library">X</button>
         <h2>Title: <span>${book.bookTitle}</span></h2>
         <p>Author: <span>${book.bookAuthor}</span></p>
         <p>Pages: <span>${book.bookPages}</span></p>

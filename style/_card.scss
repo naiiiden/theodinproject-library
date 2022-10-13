@@ -16,6 +16,12 @@
         border-radius: .5rem;
         font-weight: 700;
         cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+            background: #fff;
+            transition: .2s;
+        }
     }
 
     h2, p {
