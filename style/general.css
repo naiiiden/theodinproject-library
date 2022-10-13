@@ -17,9 +17,15 @@ img {
 }
 
 header {
-  height: 3.5rem;
+  height: 3.25rem;
   background: peru;
   display: grid;
   place-content: center;
   color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 4.25rem;
+  }
 }/*# sourceMappingURL=general.css.map */
