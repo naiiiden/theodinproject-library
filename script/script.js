@@ -36,7 +36,8 @@ function addBookToLibrary() {
 
 document.querySelector("#toggle-form").addEventListener("click", () => {
     document.querySelector(".form-container").classList.toggle("show");
-})
+    document.querySelector(".form-overlay").classList.toggle("active");
+});
 
 myLibrary.forEach(book => {
     document.querySelector("#main").innerHTML += 
