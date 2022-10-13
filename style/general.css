@@ -98,6 +98,9 @@ main {
 
 .form-container {
   border: 1px solid red;
+  display: none;
+}
+.form-container.show {
   display: flex;
   flex-direction: column;
 }

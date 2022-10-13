@@ -1,7 +1,11 @@
 .form-container {
     border: 1px solid red;
-    display: flex;
-    flex-direction: column;
+    display: none;
+
+    &.show {
+        display: flex;
+        flex-direction: column;
+    }
 
     form {
         display: flex;
