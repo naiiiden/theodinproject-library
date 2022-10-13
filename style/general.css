@@ -37,6 +37,27 @@ main {
   color: #fff;
 }
 
+.book-container {
+  max-width: 275px;
+  background-color: teal;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #1e1e1e;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+}
+.book-container h2, .book-container p {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+.book-container h2 span, .book-container p span {
+  font-size: 1.5rem;
+}
+
 footer {
   height: 3.25rem;
   background: darkolivegreen;
