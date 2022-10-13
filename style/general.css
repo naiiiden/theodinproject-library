@@ -31,6 +31,12 @@ header {
     height: 4.25rem;
   }
 }
+main {
+  flex: 1 1 auto;
+  background: forestgreen;
+  color: #fff;
+}
+
 footer {
   height: 3.25rem;
   background: darkolivegreen;
