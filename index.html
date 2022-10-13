@@ -13,6 +13,27 @@
         <button>Add a new book +</button>
     </header>
     <main id="main" class="main">
+        <div class="form-container">
+            <h3>Add a new book</h3>
+            <form>
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title-input">
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author-input">
+                <label for="pages">Pages:</label>
+                <input type="number" name="pages" id="pages-input">
+                <label for="read">Read:</label>
+                <div class="radio-container">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="yes-input" name="read" value="yes">
+                </div>
+                <div class="radio-container">
+                    <label for="no">No</label>
+                    <input type="radio" id="no-input" name="read" value="no">
+                </div>
+                <input type="submit" value="Add book">
+            </form>
+        </div>
     </main>
     <footer>
         <p><a href="https://www.theodinproject.com/lessons/node-path-javascript-library">A simple library project from The Odin Project's Full Stack Javascript path</a></p>
