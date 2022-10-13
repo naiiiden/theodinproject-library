@@ -28,4 +28,13 @@ header {
   header {
     height: 4.25rem;
   }
+}
+footer {
+  height: 3.25rem;
+  background: peru;
+  display: grid;
+  place-content: center;
+}
+footer a {
+  color: #fff;
 }/*# sourceMappingURL=general.css.map */
