@@ -9,6 +9,15 @@
     border: 1px solid #1e1e1e;
     box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
 
+    button {
+        align-self: flex-end;
+        padding: .5rem;
+        background: none;
+        border-radius: .5rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
     h2, p {
         display: flex;
         flex-direction: column;

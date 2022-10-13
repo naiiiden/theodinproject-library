@@ -54,6 +54,14 @@ main {
   border: 1px solid #1e1e1e;
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
 }
+.book-container button {
+  align-self: flex-end;
+  padding: 0.5rem;
+  background: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
 .book-container h2, .book-container p {
   display: flex;
   flex-direction: column;
