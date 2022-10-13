@@ -112,6 +112,9 @@ main {
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
+.form-container fieldset {
+  border: none;
+}
 .form-container .radio-containers {
   display: flex;
   gap: 1rem;

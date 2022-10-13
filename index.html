@@ -14,7 +14,7 @@
     </header>
     <main id="main" class="main">
         <div class="form-container">
-            <h3>Add a new book</h3>
+            <h2>Add a new book</h2>
             <form>
                 <label for="title-input">Title:</label>
                 <input type="text" name="title" id="title-input">
@@ -22,8 +22,8 @@
                 <input type="text" name="author" id="author-input">
                 <label for="pages-input">Pages:</label>
                 <input type="number" name="pages" id="pages-input">
-                <p for="read">Read:</p>
-                <div class="radio-containers">
+                <fieldset class="radio-containers">
+                <legend>Read:</legend>
                     <div class="radio-container">
                         <input type="radio" id="yes-input" name="read" value="yes">
                         <label for="yes-input">Yes</label>
@@ -32,7 +32,7 @@
                         <input type="radio" id="no-input" name="read" value="no">
                         <label for="no-input">No</label>
                     </div>
-                </div>
+                </fieldset>
                 <input type="submit" value="Add book">
             </form>
         </div>
