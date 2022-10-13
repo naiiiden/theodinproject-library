@@ -1,9 +1,28 @@
 header {
     height: 3.25rem;
     background: darkolivegreen;
-    display: grid;
-    place-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     color: #fff;
+    
+    button {
+        background: none;
+        border-radius: .5rem;
+        padding: .5rem;
+        color: #fff;
+        border-color: #fff;
+        transition: .2s;
+        cursor: pointer;
+
+        &:hover {
+            color: #000;
+            background: #fff;
+            transition: .2s;
+        }
+    }
+
 }
 
 @media screen and (min-width: 768px) {

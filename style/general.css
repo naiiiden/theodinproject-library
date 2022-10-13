@@ -21,9 +21,25 @@ img {
 header {
   height: 3.25rem;
   background: darkolivegreen;
-  display: grid;
-  place-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   color: #fff;
+}
+header button {
+  background: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: #fff;
+  border-color: #fff;
+  transition: 0.2s;
+  cursor: pointer;
+}
+header button:hover {
+  color: #000;
+  background: #fff;
+  transition: 0.2s;
 }
 
 @media screen and (min-width: 768px) {
