@@ -97,12 +97,39 @@ main {
 }
 
 .form-container {
-  border: 1px solid red;
   display: none;
 }
 .form-container.show {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: green;
+  width: 90%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.form-container .radio-containers {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+.form-container .radio-containers .radio-container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.form-container input:not(:last-child) {
+  margin: 0.25rem 0 0.75rem 0;
+}
+.form-container input[type=radio] {
+  margin: unset;
+}
+.form-container input[type=submit] {
+  padding: 0.25rem;
 }
 .form-container form {
   display: flex;

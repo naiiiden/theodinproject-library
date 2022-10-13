@@ -23,13 +23,15 @@
                 <label for="pages">Pages:</label>
                 <input type="number" name="pages" id="pages-input">
                 <label for="read">Read:</label>
-                <div class="radio-container">
-                    <label for="yes">Yes</label>
-                    <input type="radio" id="yes-input" name="read" value="yes">
-                </div>
-                <div class="radio-container">
-                    <label for="no">No</label>
-                    <input type="radio" id="no-input" name="read" value="no">
+                <div class="radio-containers">
+                    <div class="radio-container">
+                        <input type="radio" id="yes-input" name="read" value="yes">
+                        <label for="yes">Yes</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="no-input" name="read" value="no">
+                        <label for="no">No</label>
+                    </div>
                 </div>
                 <input type="submit" value="Add book">
             </form>
