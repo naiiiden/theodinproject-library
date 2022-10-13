@@ -14,4 +14,12 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+header {
+  height: 3.5rem;
+  background: peru;
+  display: grid;
+  place-content: center;
+  color: #fff;
 }/*# sourceMappingURL=general.css.map */
