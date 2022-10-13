@@ -111,6 +111,14 @@ main {
 .form-container {
   display: none;
 }
+.form-container .title-close-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-container .title-close-container button {
+  padding: 0.25rem;
+}
 .form-container.show {
   z-index: 99;
   display: flex;
