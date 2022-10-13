@@ -24,3 +24,22 @@ let myLibrary = [
         read: false,
     },
 ];
+
+
+function Book() {
+    //constructor
+}
+
+function addBookToLibrary() {
+    //do stuff here
+}
+
+myLibrary.forEach(book => {
+    document.querySelector("#main").innerHTML += 
+    `<div class="book-container">
+        <h2>Title: <span>${book.bookTitle}</span></h2>
+        <p>Author: <span>${book.bookAuthor}</span></p>
+        <p>Pages: <span>${book.bookPages}</span></p>
+        <p>Read: ${book.read ? "yes" : "no"}</p>
+    </div>`;
+});
