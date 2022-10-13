@@ -9,6 +9,8 @@ body {
   width: 100%;
   min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -34,6 +36,8 @@ footer {
   background: peru;
   display: grid;
   place-content: center;
+  margin-top: auto;
+  text-align: center;
 }
 footer a {
   color: #fff;
