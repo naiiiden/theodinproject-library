@@ -25,12 +25,26 @@ let myLibrary = [
     },
 ];
 
-function Book() {
+function Book(title, author, pages, read) {
     //constructor
+    this.bookTitle = title;
+    this.bookAuthor = author;
+    this.bookPages = pages;
+    this.read = read;
 }
 
-function addBookToLibrary() {
-    //do stuff here
+function addBookToLibrary(title, author, pages, read) {
+    title = document.querySelector("#title-input").value;
+    author = document.querySelector("#author-input").value;
+    pages = document.querySelector("#pages-input").value;
+    if (document.querySelector("#yes-input").checked == true) {
+        read = true;
+    } else {
+        read = false;
+    }
+    const newBook = new Book (title, author, pages, read);
+    console.log(newBook);
+    console.log(1);
 }
 
 document.querySelector("#toggle-form").addEventListener("click", () => {
@@ -61,4 +75,5 @@ document.querySelector(".form-overlay").addEventListener("click", () => {
 
 document.querySelector("#form-submit").addEventListener("click", (e) => {
     e.preventDefault();
+    addBookToLibrary();
 });
