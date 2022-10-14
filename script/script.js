@@ -42,10 +42,15 @@ document.querySelector("#toggle-form").addEventListener("click", () => {
 myLibrary.forEach(book => {
     document.querySelector("#main").innerHTML += 
     `<div class="book-container">
-        <button class="delete" aria-label="Remove book from library" title="Remove book from library">X</button>
-        <h2>Title: <span>${book.bookTitle}</span></h2>
-        <p>Author: <span>${book.bookAuthor}</span></p>
-        <p>Pages: <span>${book.bookPages}</span></p>
-        <p>Read: <span>${book.read ? "Yes" : "No"}</span></p>
+    <button class="delete" aria-label="Remove book from library" title="Remove book from library">X</button>
+    <h2>Title: <span>${book.bookTitle}</span></h2>
+    <p>Author: <span>${book.bookAuthor}</span></p>
+    <p>Pages: <span>${book.bookPages}</span></p>
+    <p>Read: <span>${book.read ? "Yes" : "No"}</span></p>
     </div>`;
+});
+
+document.querySelector("#form-close").addEventListener("click", () => {
+    document.querySelector(".form-container").classList.toggle("show");
+    document.querySelector(".form-overlay").classList.toggle("active");
 });
