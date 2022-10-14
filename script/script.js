@@ -47,11 +47,6 @@ function addBookToLibrary(title, author, pages, read) {
     console.log(1);
 }
 
-document.querySelector("#toggle-form").addEventListener("click", () => {
-    document.querySelector(".form-container").classList.toggle("show");
-    document.querySelector(".form-overlay").classList.toggle("active");
-});
-
 for (let i = 0; i < myLibrary.length; i++) {
     document.querySelector("#main").innerHTML += 
     `<div class="book-container" data-id=${i}>
