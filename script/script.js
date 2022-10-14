@@ -54,3 +54,8 @@ document.querySelector("#form-close").addEventListener("click", () => {
     document.querySelector(".form-container").classList.toggle("show");
     document.querySelector(".form-overlay").classList.toggle("active");
 });
+
+document.querySelector(".form-overlay").addEventListener("click", () => {
+    document.querySelector(".form-container").classList.toggle("show");
+    document.querySelector(".form-overlay").classList.toggle("active");
+});
