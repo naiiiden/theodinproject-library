@@ -37,14 +37,17 @@ function addBookToLibrary(title, author, pages, read) {
     title = document.querySelector("#title-input").value;
     author = document.querySelector("#author-input").value;
     pages = document.querySelector("#pages-input").value;
-    if (document.querySelector("#yes-input").checked == true) {
-        read = true;
-    } else {
-        read = false;
-    }
+    document.querySelector("#yes-input").checked == true ? read = true : read = false; 
     const newBook = new Book (title, author, pages, read);
-    console.log(newBook);
-    console.log(1);
+    myLibrary.push(newBook);
+    document.querySelector("#main").innerHTML += 
+    `<div class="book-container" data-id=${myLibrary.length - 1}>
+    <button class="delete" aria-label="Remove book from library" title="Remove book from library">X</button>
+    <h2>Title: <span>${myLibrary[myLibrary.length - 1].bookTitle}</span></h2>
+    <p>Author: <span>${myLibrary[myLibrary.length - 1].bookAuthor}</span></p>
+    <p>Pages: <span>${myLibrary[myLibrary.length - 1].bookPages}</span></p>
+    <p>Read: <span>${myLibrary[myLibrary.length - 1].read ? "Yes" : "No"}</span></p>
+    </div>`;
 }
 
 for (let i = 0; i < myLibrary.length; i++) {
@@ -66,6 +69,6 @@ document.querySelectorAll(".open-close-button").forEach(button => {
 });
 
 document.querySelector("#form-submit").addEventListener("click", (e) => {
-    e.preventDefault();
     addBookToLibrary();
+    e.preventDefault();
 });
