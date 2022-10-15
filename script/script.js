@@ -4,32 +4,7 @@ document.querySelector("#form-submit").addEventListener("click", (e) => {
 
 });
 
-let myLibrary = [
-    {
-        bookTitle: "Warcraft: Of Blood and Honor",
-        bookAuthor: "Chris Metzen",
-        bookPages: 128,
-        read: false,
-    },
-    {
-        bookTitle: "Warcraft: Day of the Dragon",
-        bookAuthor: "Richard A. Knaak",
-        bookPages: 384,
-        read: false,
-    },
-    {
-        bookTitle: "Warcraft: Lord of the Clans",
-        bookAuthor: "Christie Golden",
-        bookPages: 278,
-        read: false,
-    },
-    {
-        bookTitle: "Warcraft: The Last Guardian",
-        bookAuthor: "Jeff Grubb",
-        bookPages: 308,
-        read: false,
-    },
-];
+let myLibrary = [];
 
 for (let i = 0; i < myLibrary.length; i++) {
     document.querySelector("#main").innerHTML += 
@@ -51,17 +26,15 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary(title, author, pages, read) {
-    // title = document.querySelector("#title-input").value;
-    // author = document.querySelector("#author-input").value;
-    // pages = document.querySelector("#pages-input").value;
-    // document.querySelector("#yes-input").checked == true ? read = true : read = false; 
-    const newBook = new Book (
+    myLibrary.push(new Book (
         title = document.querySelector("#title-input").value,
         author = document.querySelector("#author-input").value,
         pages = document.querySelector("#pages-input").value,
         document.querySelector("#yes-input").checked == true ? read = true : read = false,
-    );
-    myLibrary.push(newBook);
+    ));
+}
+
+function displayBook() {
     document.querySelector("#main").innerHTML += 
     `<div class="book-container" data-id=${myLibrary.length - 1}>
     <button class="delete" aria-label="Remove book from library" title="Remove book from library">X</button>
@@ -75,6 +48,7 @@ function addBookToLibrary(title, author, pages, read) {
 
 document.querySelector("#form-submit").addEventListener("click", (e) => {
     addBookToLibrary();
+    displayBook();
     e.preventDefault();
 });
 
