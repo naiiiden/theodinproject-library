@@ -60,7 +60,7 @@ main {
 }
 
 .book-container {
-  max-width: 275px;
+  min-width: 275px;
   min-height: 350px;
   background-color: teal;
   border-radius: 0.5rem;
