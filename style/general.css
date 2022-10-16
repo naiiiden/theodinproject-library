@@ -57,8 +57,10 @@ main {
   justify-content: flex-start;
 }
 main .cards-container {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -100,6 +102,11 @@ main .cards-container {
   font-size: 1.5rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .book-container {
+    min-width: 23.5%;
+  }
+}
 .form-overlay {
   position: fixed;
   width: 100vw;
