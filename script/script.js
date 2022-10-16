@@ -1,9 +1,3 @@
-document.querySelector("#form-submit").addEventListener("click", (e) => {
-    e.preventDefault();
-    addBookToLibrary();
-
-});
-
 let myLibrary = [];
 
 for (let i = 0; i < myLibrary.length; i++) {
