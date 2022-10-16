@@ -25,6 +25,15 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
+Book.prototype.changeRead = function() {
+    if (this.read == true) {
+        this.read = false;
+    } else {
+        this.read = true;
+    }
+    console.log(this.read);
+}
+
 function addBookToLibrary() {
     myLibrary.push(new Book (
         title = document.querySelector("#title-input").value,
@@ -44,6 +53,7 @@ function displayBook() {
     <p>Read: <span>${myLibrary[myLibrary.length - 1].read ? "Yes" : "No"}</span></p>
     </div>`;
     console.log(myLibrary);
+    // dynamically created variables names - e.g: book1, book2, book3 depending on array index
 }
 
 document.querySelector("#form-submit").addEventListener("click", (e) => {
