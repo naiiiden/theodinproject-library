@@ -1,29 +1,9 @@
-let myLibrary = [
-    {
-        bookTitle: "Warcraft: Of Blood and Honor",
-        bookAuthor: "Chris Metzen",
-        bookPages: 128,
-        read: false,
-    },
-    {
-        bookTitle: "Warcraft: Day of the Dragon",
-        bookAuthor: "Richard A. Knaak",
-        bookPages: 384,
-        read: false,
-    },
-    {
-        bookTitle: "Warcraft: Lord of the Clans",
-        bookAuthor: "Christie Golden",
-        bookPages: 278,
-        read: false,
-    },
-    {
-        bookTitle: "Warcraft: The Last Guardian",
-        bookAuthor: "Jeff Grubb",
-        bookPages: 308,
-        read: false,
-    },
-];
+let myLibrary = [];
+
+myLibrary.push(new Book("Warcraft: Of Blood and Honor", "Chris Metzen", 128, false));
+myLibrary.push(new Book("Warcraft: Day of the Dragon", "Richard A. Knaak", 384, false));
+myLibrary.push(new Book("Warcraft: Lord of the Clans", "Christie Golden", 278, false));
+myLibrary.push(new Book("Warcraft: The Last Guardian", "Jeff Grubb", 308, false));
 
 // print pre-written books for better styling
 for (let i = 0; i < myLibrary.length; i++) {
