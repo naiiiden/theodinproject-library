@@ -53,9 +53,12 @@ main {
   background: forestgreen;
   color: #fff;
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+}
+main .cards-container {
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -98,10 +101,12 @@ main {
 }
 
 .form-overlay {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   top: 0;
+  left: 0;
+  bottom: 0;
   z-index: -1;
 }
 .form-overlay.active {

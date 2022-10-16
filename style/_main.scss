@@ -4,8 +4,12 @@ main {
     background:forestgreen;
     color: #fff;
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-evenly;
-    gap: 1rem;
+    justify-content: flex-start;
+    
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
 }
