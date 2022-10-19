@@ -8,7 +8,7 @@ myLibrary.push(new Book("Warcraft: The Last Guardian", "Jeff Grubb", 308, false)
 for (let i = 0; i < myLibrary.length; i++) {
     document.querySelector(".cards-container").innerHTML += 
     `<div class="book-container" data-id=${i} id="book${i} book">
-    <button class="delete" aria-label="Remove book from library" title="Remove book from library">X</button>
+    <button class="delete" aria-label="Remove ${myLibrary[i].title} from library" title="Remove book from library">X</button>
     <h2>Title: <span>${myLibrary[i].title}</span></h2>
     <p>Author: <span>${myLibrary[i].author}</span></p>
     <p>Pages: <span>${myLibrary[i].pages}</span></p>
@@ -44,7 +44,7 @@ function addBookToLibrary() {
 function displayBook() {
     document.querySelector(".cards-container").innerHTML += 
     `<div class="book-container" data-id=${myLibrary.length - 1} id="book${myLibrary.length - 1} book">
-    <button class="delete" aria-label="Remove book from library" title="Remove book from library">X</button>
+    <button class="delete" aria-label="Remove ${myLibrary[myLibrary.length - 1].title} from library" title="Remove book from library">X</button>
     <h2>Title: <span>${myLibrary[myLibrary.length - 1].title}</span></h2>
     <p>Author: <span>${myLibrary[myLibrary.length - 1].author}</span></p>
     <p>Pages: <span>${myLibrary[myLibrary.length - 1].pages}</span></p>
