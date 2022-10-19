@@ -5,10 +5,9 @@ myLibrary.push(new Book("Warcraft: Day of the Dragon", "Richard A. Knaak", 384, 
 myLibrary.push(new Book("Warcraft: Lord of the Clans", "Christie Golden", 278, false));
 myLibrary.push(new Book("Warcraft: The Last Guardian", "Jeff Grubb", 308, false));
 
-// print pre-written books for better styling
 for (let i = 0; i < myLibrary.length; i++) {
     document.querySelector(".cards-container").innerHTML += 
-    `<div class="book-container" data-id=${i} id="book${i}">
+    `<div class="book-container" data-id=${i} id="book${i} book">
     <button class="delete" aria-label="Remove book from library" title="Remove book from library">X</button>
     <h2>Title: <span>${myLibrary[i].title}</span></h2>
     <p>Author: <span>${myLibrary[i].author}</span></p>
@@ -18,7 +17,6 @@ for (let i = 0; i < myLibrary.length; i++) {
 };
 
 function Book(title, author, pages, read) {
-    //constructor
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -45,7 +43,7 @@ function addBookToLibrary() {
 
 function displayBook() {
     document.querySelector(".cards-container").innerHTML += 
-    `<div class="book-container" data-id=${myLibrary.length - 1} id="book${myLibrary.length - 1}">
+    `<div class="book-container" data-id=${myLibrary.length - 1} id="book${myLibrary.length - 1} book">
     <button class="delete" aria-label="Remove book from library" title="Remove book from library">X</button>
     <h2>Title: <span>${myLibrary[myLibrary.length - 1].title}</span></h2>
     <p>Author: <span>${myLibrary[myLibrary.length - 1].author}</span></p>
@@ -53,21 +51,26 @@ function displayBook() {
     <p>Read: <span>${myLibrary[myLibrary.length - 1].read ? "Yes" : "No"}</span></p>
     </div>`;
     console.log(myLibrary);
-    // dynamically created variables names - e.g: book1, book2, book3 depending on array index
 }
 
-document.querySelectorAll(".delete").forEach(deleteBtn => {
-    deleteBtn.addEventListener("click", (e) => {
-        // console.log(this.document.querySelector(".book-container"));
-        console.log(e.target);
-        console.log(document.querySelector(".book-container").getAttribute("data-id"));
+let bookContainers = document.getElementsByClassName("delete");
+for (let i = 0; i < bookContainers.length; i++) {
+    bookContainers[i].addEventListener("click", (e) => {
+        e.currentTarget.parentNode.remove();
     });
-});
+}
 
 document.querySelector("#form-submit").addEventListener("click", (e) => {
     addBookToLibrary();
     displayBook();
     e.preventDefault();
+
+    let bookContainers = document.getElementsByClassName("delete");
+    for (let i = 0; i < bookContainers.length; i++) {
+        bookContainers[i].addEventListener("click", (e) => {
+            e.currentTarget.parentNode.remove();
+        });
+    }
 });
 
 document.querySelectorAll(".open-close-button").forEach(button => {
