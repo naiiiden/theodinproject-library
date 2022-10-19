@@ -57,6 +57,8 @@ let bookContainers = document.getElementsByClassName("delete");
 for (let i = 0; i < bookContainers.length; i++) {
     bookContainers[i].addEventListener("click", (e) => {
         e.currentTarget.parentNode.remove();
+        myLibrary.splice(i, 1);
+        console.log(myLibrary);
     });
 }
 
@@ -69,6 +71,8 @@ document.querySelector("#form-submit").addEventListener("click", (e) => {
     for (let i = 0; i < bookContainers.length; i++) {
         bookContainers[i].addEventListener("click", (e) => {
             e.currentTarget.parentNode.remove();
+            myLibrary.splice(i, 1);
+            console.log(myLibrary);
         });
     }
 });
