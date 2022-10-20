@@ -7,7 +7,7 @@ myLibrary.push(new Book("Warcraft: The Last Guardian", "Jeff Grubb", 308, false)
 
 for (let i = 0; i < myLibrary.length; i++) {
     document.querySelector(".cards-container").innerHTML += 
-    `<div class="book-container" data-id=${i} id="book${i} book">
+    `<div class="book-container" data-id=${i}>
     <button class="delete" aria-label="Remove ${myLibrary[i].title} from library" title="Remove book from library">X</button>
     <h2>Title: <span>${myLibrary[i].title}</span></h2>
     <p>Author: <span>${myLibrary[i].author}</span></p>
@@ -43,7 +43,7 @@ function addBookToLibrary() {
 
 function displayBook() {
     document.querySelector(".cards-container").innerHTML += 
-    `<div class="book-container" data-id=${myLibrary.length - 1} id="book${myLibrary.length - 1} book">
+    `<div class="book-container" data-id=${myLibrary.length - 1}>
     <button class="delete" aria-label="Remove ${myLibrary[myLibrary.length - 1].title} from library" title="Remove book from library">X</button>
     <h2>Title: <span>${myLibrary[myLibrary.length - 1].title}</span></h2>
     <p>Author: <span>${myLibrary[myLibrary.length - 1].author}</span></p>
@@ -56,11 +56,16 @@ function displayBook() {
 let bookContainers = document.getElementsByClassName("delete");
 for (let i = 0; i < bookContainers.length; i++) {
     bookContainers[i].addEventListener("click", (e) => {
-        e.currentTarget.parentNode.remove();
+        console.log(3, e.currentTarget.parentNode.getAttribute(["data-id"]));
+        
         myLibrary.splice(i, 1);
+        // myLibrary.splice(parseFloat(e.currentTarget.parentNode.getAttribute("data-id")), 1);
+        e.currentTarget.parentNode.remove();
         console.log(myLibrary);
+        console.log(1, document.getElementsByClassName("delete"));
     });
 }
+console.log(2, document.getElementsByClassName("delete"));
 
 document.querySelector("#form-submit").addEventListener("click", (e) => {
     addBookToLibrary();
@@ -70,11 +75,17 @@ document.querySelector("#form-submit").addEventListener("click", (e) => {
     let bookContainers = document.getElementsByClassName("delete");
     for (let i = 0; i < bookContainers.length; i++) {
         bookContainers[i].addEventListener("click", (e) => {
-            e.currentTarget.parentNode.remove();
+            console.log(3, e.currentTarget.parentNode.getAttribute(["data-id"]));
+        
             myLibrary.splice(i, 1);
+
+            // myLibrary.splice(parseFloat(e.currentTarget.parentNode.getAttribute("data-id")), 1);
+            e.currentTarget.parentNode.remove();
             console.log(myLibrary);
+            console.log(1, document.getElementsByClassName("delete"));
         });
     }
+    console.log(1, document.getElementsByClassName("delete"));
 });
 
 document.querySelectorAll(".open-close-button").forEach(button => {
