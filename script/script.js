@@ -68,8 +68,13 @@ for (let i = 0; i < bookContainers.length; i++) {
 console.log(2, document.getElementsByClassName("delete"));
 
 document.querySelector("#form-submit").addEventListener("click", (e) => {
-    addBookToLibrary();
-    displayBook();
+    if (document.querySelector("#title-input").value !== "" && document.querySelector("#author-input").value !== "" && document.querySelector("#pages-input").value !== "") {
+        addBookToLibrary();
+        displayBook();
+    } else {
+        alert("Book submit cannot be empty!");
+        console.log(myLibrary);
+    }
     e.preventDefault();
 
     let bookContainers = document.getElementsByClassName("delete");
