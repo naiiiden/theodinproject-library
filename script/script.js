@@ -29,7 +29,6 @@ function Book(title, author, pages, read, id) {
 
 Book.prototype.changeRead = function() {
     this.read = !this.read;
-    console.log(this.read);
 }
 
 function addBookToLibrary() {
@@ -50,57 +49,20 @@ function addBookToLibrary() {
         <button class="book-change-read">${myLibrary[myLibrary.length - 1].read ? "Yes" : "No"}</button>
     </div>`;
     document.querySelector(".cards-container").insertAdjacentHTML("beforeend", bookContainer);
-    console.log(myLibrary);
 }
-
-let bookContainers = document.getElementsByClassName("delete");
-for (let i = 0; i < bookContainers.length; i++) {
-    bookContainers[i].addEventListener("click", (e) => {
-        console.log(3, e.currentTarget.parentNode.getAttribute(["data-id"]));
-        
-        myLibrary.splice(i, 1);
-        e.currentTarget.parentNode.remove();
-        console.log(myLibrary);
-        console.log(1, document.getElementsByClassName("delete"));
-    });
-}
-console.log(2, document.getElementsByClassName("delete"));
 
 document.querySelector("#form-submit").addEventListener("click", (e) => {
     if (document.querySelector("#title-input").value !== "" && document.querySelector("#author-input").value !== "" && document.querySelector("#pages-input").value !== "") {
         addBookToLibrary();
     } else {
         alert("Book submit cannot be empty!");
-        console.log(myLibrary);
     }
     e.preventDefault();
-
-    let bookContainers = document.getElementsByClassName("delete");
-    for (let i = 0; i < bookContainers.length; i++) {
-        bookContainers[i].addEventListener("click", (e) => {
-            console.log(3, e.currentTarget.parentNode.getAttribute(["data-id"]));
-        
-            myLibrary.splice(i, 1);
-
-            e.currentTarget.parentNode.remove();
-            console.log(myLibrary);
-            console.log(1, document.getElementsByClassName("delete"));
-        });
-    }
-    console.log(1, document.getElementsByClassName("delete"));
 });
 
 document.querySelectorAll(".open-close-button").forEach(button => {
     button.addEventListener("click", () => {
         document.querySelector(".form-container").classList.toggle("show");
         document.querySelector(".form-overlay").classList.toggle("active");
-    });
-});
-
-document.querySelectorAll(".book-change-read").forEach(button => {
-    button.addEventListener("click", () => {
-        const bookIndex = Array.from(button.parentNode.parentNode.children).indexOf(button.parentNode);
-        myLibrary[bookIndex].changeRead();
-        button.textContent = myLibrary[bookIndex].read ? "Yes" : "No";
     });
 });
