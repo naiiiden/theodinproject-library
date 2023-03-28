@@ -24,11 +24,7 @@ function Book(title, author, pages, read) {
 }
 
 Book.prototype.changeRead = function() {
-    if (this.read == true) {
-        this.read = false;
-    } else {
-        this.read = true;
-    }
+    this.read = !this.read;
     console.log(this.read);
 }
 
@@ -44,7 +40,7 @@ function addBookToLibrary() {
 function displayBook() {
     document.querySelector(".cards-container").innerHTML += 
     `<div class="book-container">
-    <button class="delete" aria-label="Remove ${myLibrary[myLibrary.length - 1].title} from library" title="Remove book from library">X</button>
+    <button class="delete" aria-label="Remove ${myLibrary[i].title} from library" title="Remove book from library">X</button>
     <h2>Title: <span>${myLibrary[myLibrary.length - 1].title}</span></h2>
     <p>Author: <span>${myLibrary[myLibrary.length - 1].author}</span></p>
     <p>Pages: <span>${myLibrary[myLibrary.length - 1].pages}</span></p>
@@ -59,7 +55,6 @@ for (let i = 0; i < bookContainers.length; i++) {
         console.log(3, e.currentTarget.parentNode.getAttribute(["data-id"]));
         
         myLibrary.splice(i, 1);
-        // myLibrary.splice(parseFloat(e.currentTarget.parentNode.getAttribute("data-id")), 1);
         e.currentTarget.parentNode.remove();
         console.log(myLibrary);
         console.log(1, document.getElementsByClassName("delete"));
@@ -84,7 +79,6 @@ document.querySelector("#form-submit").addEventListener("click", (e) => {
         
             myLibrary.splice(i, 1);
 
-            // myLibrary.splice(parseFloat(e.currentTarget.parentNode.getAttribute("data-id")), 1);
             e.currentTarget.parentNode.remove();
             console.log(myLibrary);
             console.log(1, document.getElementsByClassName("delete"));
