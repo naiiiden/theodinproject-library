@@ -93,3 +93,11 @@ document.querySelectorAll(".open-close-button").forEach(button => {
         document.querySelector(".form-overlay").classList.toggle("active");
     });
 });
+
+document.querySelectorAll(".book-change-read").forEach(button => {
+    button.addEventListener("click", () => {
+        const bookIndex = Array.from(button.parentNode.parentNode.children).indexOf(button.parentNode);
+        myLibrary[bookIndex].changeRead();
+        button.textContent = myLibrary[bookIndex].read ? "Yes" : "No";
+    });
+});
