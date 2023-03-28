@@ -12,7 +12,8 @@ for (let i = 0; i < myLibrary.length; i++) {
         <h2>Title: <span>${myLibrary[i].title}</span></h2>
         <p>Author: <span>${myLibrary[i].author}</span></p>
         <p>Pages: <span>${myLibrary[i].pages}</span></p>
-        <p>Read: <span>${myLibrary[i].read ? "Yes" : "No"}</span></p>
+        <p>Read: </p>
+        <button class="book-change-read">${myLibrary[i].read ? "Yes" : "No"}</button>
     </div>`;
     document.querySelector(".cards-container").insertAdjacentHTML("beforeend", bookContainer);
 };
@@ -36,16 +37,14 @@ function addBookToLibrary() {
         pages = document.querySelector("#pages-input").value,
         document.querySelector("#yes-input").checked == true ? read = true : read = false,
     ));
-}
-
-function displayBook() {
     const bookContainer =
     `<div class="book-container">
         <button class="delete" aria-label="Remove ${myLibrary[myLibrary.length - 1].title} from library" title="Remove book from library">X</button>
         <h2>Title: <span>${myLibrary[myLibrary.length - 1].title}</span></h2>
         <p>Author: <span>${myLibrary[myLibrary.length - 1].author}</span></p>
         <p>Pages: <span>${myLibrary[myLibrary.length - 1].pages}</span></p>
-        <p>Read: <span>${myLibrary[myLibrary.length - 1].read ? "Yes" : "No"}</span></p>
+        <p>Read: </p>
+        <button class="book-change-read">${myLibrary[myLibrary.length - 1].read ? "Yes" : "No"}</button>
     </div>`;
     document.querySelector(".cards-container").insertAdjacentHTML("beforeend", bookContainer);
     console.log(myLibrary);
@@ -67,7 +66,6 @@ console.log(2, document.getElementsByClassName("delete"));
 document.querySelector("#form-submit").addEventListener("click", (e) => {
     if (document.querySelector("#title-input").value !== "" && document.querySelector("#author-input").value !== "" && document.querySelector("#pages-input").value !== "") {
         addBookToLibrary();
-        displayBook();
     } else {
         alert("Book submit cannot be empty!");
         console.log(myLibrary);
