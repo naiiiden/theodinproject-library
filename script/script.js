@@ -6,14 +6,15 @@ myLibrary.push(new Book("Warcraft: Lord of the Clans", "Christie Golden", 278, f
 myLibrary.push(new Book("Warcraft: The Last Guardian", "Jeff Grubb", 308, false));
 
 for (let i = 0; i < myLibrary.length; i++) {
-    document.querySelector(".cards-container").innerHTML += 
+    const bookContainer =
     `<div class="book-container">
-    <button class="delete" aria-label="Remove ${myLibrary[i].title} from library" title="Remove book from library">X</button>
-    <h2>Title: <span>${myLibrary[i].title}</span></h2>
-    <p>Author: <span>${myLibrary[i].author}</span></p>
-    <p>Pages: <span>${myLibrary[i].pages}</span></p>
-    <p>Read: <span>${myLibrary[i].read ? "Yes" : "No"}</span></p>
+        <button class="delete" aria-label="Remove ${myLibrary[i].title} from library" title="Remove book from library">X</button>
+        <h2>Title: <span>${myLibrary[i].title}</span></h2>
+        <p>Author: <span>${myLibrary[i].author}</span></p>
+        <p>Pages: <span>${myLibrary[i].pages}</span></p>
+        <p>Read: <span>${myLibrary[i].read ? "Yes" : "No"}</span></p>
     </div>`;
+    document.querySelector(".cards-container").insertAdjacentHTML("beforeend", bookContainer);
 };
 
 function Book(title, author, pages, read) {
@@ -38,14 +39,15 @@ function addBookToLibrary() {
 }
 
 function displayBook() {
-    document.querySelector(".cards-container").innerHTML += 
+    const bookContainer =
     `<div class="book-container">
-    <button class="delete" aria-label="Remove ${myLibrary[myLibrary.length - 1].title} from library" title="Remove book from library">X</button>
-    <h2>Title: <span>${myLibrary[myLibrary.length - 1].title}</span></h2>
-    <p>Author: <span>${myLibrary[myLibrary.length - 1].author}</span></p>
-    <p>Pages: <span>${myLibrary[myLibrary.length - 1].pages}</span></p>
-    <p>Read: <span>${myLibrary[myLibrary.length - 1].read ? "Yes" : "No"}</span></p>
+        <button class="delete" aria-label="Remove ${myLibrary[myLibrary.length - 1].title} from library" title="Remove book from library">X</button>
+        <h2>Title: <span>${myLibrary[myLibrary.length - 1].title}</span></h2>
+        <p>Author: <span>${myLibrary[myLibrary.length - 1].author}</span></p>
+        <p>Pages: <span>${myLibrary[myLibrary.length - 1].pages}</span></p>
+        <p>Read: <span>${myLibrary[myLibrary.length - 1].read ? "Yes" : "No"}</span></p>
     </div>`;
+    document.querySelector(".cards-container").insertAdjacentHTML("beforeend", bookContainer);
     console.log(myLibrary);
 }
 
