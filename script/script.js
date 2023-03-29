@@ -9,12 +9,12 @@ myLibrary.push(new Book("Warcraft: The Last Guardian", "Jeff Grubb", 308, false,
 for (let i = 0; i < myLibrary.length; i++) {
     const bookContainer =
     `<div class="book-container">
-        <button class="delete" aria-label="Remove ${myLibrary[i].title} from library" title="Remove book from library" data-id="${myLibrary[i].id}">X</button>
+        <button class="delete" aria-label="Remove ${myLibrary[i].title} from library" title="Remove ${myLibrary[i].title} from library" data-id="${myLibrary[i].id}">X</button>
         <h2>Title: <span>${myLibrary[i].title}</span></h2>
         <p>Author: <span>${myLibrary[i].author}</span></p>
         <p>Pages: <span>${myLibrary[i].pages}</span></p>
         <p>Read: </p>
-        <button class="book-change-read">${myLibrary[i].read ? "Yes" : "No"}</button>
+        <button class="book-change-read" data-id="${myLibrary[i].id}" aria-label="Change read status">${myLibrary[i].read ? "Yes" : "No"}</button>
     </div>`;
     document.querySelector(".cards-container").insertAdjacentHTML("beforeend", bookContainer);
 };
@@ -41,12 +41,12 @@ function addBookToLibrary() {
     ));
     const bookContainer =
     `<div class="book-container">
-        <button class="delete" aria-label="Remove ${myLibrary[myLibrary.length - 1].title} from library" title="Remove book from library" data-id="${myLibrary[myLibrary.length - 1].id}">X</button>
+        <button class="delete" aria-label="Remove ${myLibrary[myLibrary.length - 1].title} from library" title="Remove ${myLibrary[myLibrary.length - 1].title} from library" data-id="${myLibrary[myLibrary.length - 1].id}">X</button>
         <h2>Title: <span>${myLibrary[myLibrary.length - 1].title}</span></h2>
         <p>Author: <span>${myLibrary[myLibrary.length - 1].author}</span></p>
         <p>Pages: <span>${myLibrary[myLibrary.length - 1].pages}</span></p>
         <p>Read: </p>
-        <button class="book-change-read">${myLibrary[myLibrary.length - 1].read ? "Yes" : "No"}</button>
+        <button class="book-change-read" data-id="${myLibrary[myLibrary.length - 1].id}" aria-label="Change read status">${myLibrary[myLibrary.length - 1].read ? "Yes" : "No"}</button>
     </div>`;
     document.querySelector(".cards-container").insertAdjacentHTML("beforeend", bookContainer);
 }
