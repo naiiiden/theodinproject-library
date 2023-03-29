@@ -73,5 +73,12 @@ document.querySelector(".cards-container").addEventListener("click", (e) => {
       myLibrary = myLibrary.filter(book => book.id != bookId);
       e.target.parentElement.remove();
       console.log(myLibrary);
+    } else if (e.target.classList.contains("book-change-read")) {
+        const bookId = parseInt(e.target.dataset.id);
+        const book = myLibrary.find(book => book.id === bookId);
+        if (book) {
+            book.changeRead();
+            e.target.textContent = book.read ? "Yes" : "No"; // update the button text directly
+        }
     }
 });
