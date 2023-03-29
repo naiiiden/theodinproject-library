@@ -122,6 +122,8 @@ main .cards-container {
 }
 .book-container h2 span, .book-container p span {
   font-size: 1.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 1024px) {
