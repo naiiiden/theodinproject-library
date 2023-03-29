@@ -66,3 +66,12 @@ document.querySelectorAll(".open-close-button").forEach(button => {
         document.querySelector(".form-overlay").classList.toggle("active");
     });
 });
+
+document.querySelector(".cards-container").addEventListener("click", (e) => {
+    if (e.target.classList.contains("delete")) {
+      const bookId = e.target.dataset.id;
+      myLibrary = myLibrary.filter(book => book.id != bookId);
+      e.target.parentElement.remove();
+      console.log(myLibrary);
+    }
+});
