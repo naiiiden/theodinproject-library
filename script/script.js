@@ -14,7 +14,7 @@ for (let i = 0; i < myLibrary.length; i++) {
         <p>Author: <span>${myLibrary[i].author}</span></p>
         <p>Pages: <span>${myLibrary[i].pages}</span></p>
         <p>Read: </p>
-        <button class="book-change-read" data-id="${myLibrary[i].id}" aria-label="Change read status">${myLibrary[i].read ? "Yes" : "No"}</button>
+        <button class="book-change-read" data-id="${myLibrary[i].id}" aria-label="Change read status">${myLibrary[i].read ? "Read" : "Not read"}</button>
     </div>`;
     document.querySelector(".cards-container").insertAdjacentHTML("beforeend", bookContainer);
 };
@@ -46,7 +46,7 @@ function addBookToLibrary() {
         <p>Author: <span>${myLibrary[myLibrary.length - 1].author}</span></p>
         <p>Pages: <span>${myLibrary[myLibrary.length - 1].pages}</span></p>
         <p>Read: </p>
-        <button class="book-change-read" data-id="${myLibrary[myLibrary.length - 1].id}" aria-label="Change read status">${myLibrary[myLibrary.length - 1].read ? "Yes" : "No"}</button>
+        <button class="book-change-read" data-id="${myLibrary[myLibrary.length - 1].id}" aria-label="Change read status">${myLibrary[myLibrary.length - 1].read ? "Read" : "Not read"}</button>
     </div>`;
     document.querySelector(".cards-container").insertAdjacentHTML("beforeend", bookContainer);
 }
@@ -78,7 +78,7 @@ document.querySelector(".cards-container").addEventListener("click", (e) => {
         const book = myLibrary.find(book => book.id === bookId);
         if (book) {
             book.changeRead();
-            e.target.textContent = book.read ? "Yes" : "No"; // update the button text directly
+            e.target.textContent = book.read ? "Read" : "Not read"; // update the button text directly
         }
     }
 });

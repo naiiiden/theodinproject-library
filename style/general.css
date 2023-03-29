@@ -92,6 +92,9 @@ main .cards-container {
   background: #fff;
   transition: 0.2s;
 }
+.book-container button.delete {
+  align-self: flex-end;
+}
 .book-container h2, .book-container p {
   display: flex;
   flex-direction: column;

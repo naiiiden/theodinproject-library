@@ -26,6 +26,10 @@
             background: #fff;
             transition: .2s;
         }
+
+        &.delete {
+            align-self: flex-end;
+        }
     }
 
     h2, p {
