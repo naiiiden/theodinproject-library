@@ -18,6 +18,10 @@ img {
     height: auto;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 @import "./header";
 @import "./main";
 @import "./card";

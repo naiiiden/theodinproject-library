@@ -18,6 +18,10 @@ img {
   height: auto;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 header {
   padding: 0.625rem;
   background: darkolivegreen;

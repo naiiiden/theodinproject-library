@@ -64,6 +64,7 @@ document.querySelectorAll(".open-close-button").forEach(button => {
     button.addEventListener("click", () => {
         document.querySelector(".form-container").classList.toggle("show");
         document.querySelector(".form-overlay").classList.toggle("active");
+        document.body.classList.toggle("no-scroll");
     });
 });
 
