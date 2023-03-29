@@ -19,7 +19,7 @@ img {
 }
 
 header {
-  height: 3.25rem;
+  padding: 0.625rem;
   background: darkolivegreen;
   display: flex;
   align-items: center;
@@ -42,11 +42,6 @@ header button:hover {
   transition: 0.2s;
 }
 
-@media screen and (min-width: 768px) {
-  header {
-    height: 4.25rem;
-  }
-}
 main {
   --columns: 1;
   padding: 1.5rem;
@@ -126,11 +121,6 @@ main .cards-container {
   overflow: hidden;
 }
 
-@media screen and (min-width: 1024px) {
-  .book-container {
-    min-width: 23.5%;
-  }
-}
 .form-overlay {
   position: fixed;
   width: 100vw;
@@ -169,6 +159,7 @@ main .cards-container {
   width: 90%;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  max-width: 30rem;
 }
 .form-container fieldset {
   border: none;
@@ -197,13 +188,8 @@ main .cards-container {
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
-  .form-container {
-    max-width: 30rem;
-  }
-}
 footer {
-  height: 3.25rem;
+  padding: 0.625rem;
   background: darkolivegreen;
   display: grid;
   place-content: center;
@@ -212,10 +198,4 @@ footer {
 }
 footer a {
   color: #fff;
-}
-
-@media screen and (min-width: 768px) {
-  footer {
-    height: 4.25rem;
-  }
 }/*# sourceMappingURL=general.css.map */

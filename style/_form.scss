@@ -39,6 +39,7 @@
         width: 90%;
         padding: .5rem;
         border-radius: .5rem;
+        max-width: 30rem;
     }
 
     fieldset {
@@ -72,11 +73,5 @@
     form {
         display: flex;
         flex-direction: column;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .form-container {
-        max-width: 30rem;
     }
 }
