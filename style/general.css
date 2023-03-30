@@ -201,5 +201,7 @@ footer {
   text-align: center;
 }
 footer a {
+  display: flex;
+  align-items: center;
   color: #fff;
 }/*# sourceMappingURL=general.css.map */
