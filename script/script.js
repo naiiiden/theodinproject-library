@@ -54,6 +54,10 @@ function addBookToLibrary() {
 document.querySelector("#form-submit").addEventListener("click", (e) => {
     if (document.querySelector("#title-input").value !== "" && document.querySelector("#author-input").value !== "" && document.querySelector("#pages-input").value !== "") {
         addBookToLibrary();
+        document.querySelectorAll("input").forEach(input => {
+            input.value = "";
+            input.checked = false;
+        });
     } else {
         alert("Book submit cannot be empty!");
     }
